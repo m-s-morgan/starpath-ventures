@@ -2,11 +2,9 @@
     position: relative;
 }
 
-.main {
-
-}
-
 .hero {
-    height: 100vh;
-    height: 50em;
+    background-image: url('/backgrounds/earth.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

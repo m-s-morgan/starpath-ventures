@@ -1,14 +1,14 @@
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import './slider.module.css';
+import styles from './slider.module.css';
 
 export default function Slider(props: ISliderProps) {
-    const auto = !!props.auto;
+    const auto = props.auto;
     const [sliderRef, slider] = useKeenSlider({
         controls: !auto,
         loop: true,
-        duration: 1000,
+        duration: 2000,
     });
 
     if (auto) {
@@ -17,7 +17,7 @@ export default function Slider(props: ISliderProps) {
                 if (!!slider) {
                     slider.next();
                 }
-            }, 5000);
+            }, 6000);
 
             return () => {
                 clearInterval(timeout);
@@ -27,12 +27,14 @@ export default function Slider(props: ISliderProps) {
 
     return (
         <>
-        <div ref={sliderRef as React.RefObject<HTMLDivElement>} className="keen-slider">
+        <div ref={sliderRef as React.RefObject<HTMLDivElement>} className={`keen-slider ${styles.slider}`}>
             {
                 props.slides.map((s, i) => {
-                    <div key={i} className="keen-slider__slide">
-                        <h2>{s}</h2>
-                    </div>
+                    return (
+                        <div key={i} className="keen-slider__slide">
+                            <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${styles.header}`}>{s}</h1>
+                        </div>
+                    );
                 })
             }
         </div>

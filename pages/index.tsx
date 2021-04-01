@@ -21,10 +21,18 @@ export default function Home() {
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
       <Navbar></Navbar>
-      <main className={styles.main}>
-        <div className={styles.hero}>
-          <Slider slides={slides} auto={true}></Slider>
-        </div>
+      <main>
+        <section id="top" className={`${styles.hero} bg-black`}>
+          <div className="s-contain h-full max-w-screen-xl mx-auto px-5 sm:px-6 lg:px-8">
+            <Slider slides={slides} auto={true}></Slider>
+            <a className="next-section" href="#about">
+              <img src="/misc/downarrow_light.png" alt="About" />
+            </a>
+          </div>
+        </section>
+        <section id="about">
+
+        </section>
       </main>
     </div>
   )
