@@ -39,6 +39,7 @@ section {
   right: 1em;
   font-size: 2rem;
   text-align: center;
+  z-index: 10;
 }
 
 .next-section img {
