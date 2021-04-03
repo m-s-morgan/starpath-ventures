@@ -1,6 +1,6 @@
-import React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+import React from 'react';
+import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css';
 import styles from './slider.module.css';
 
 export default function Slider(props: ISliderProps) {

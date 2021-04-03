@@ -108,6 +108,18 @@ section {
   box-sizing: border-box;
 }
 
+.swal2-content {
+  max-height: 10em;
+  max-height: 30vh;
+  overflow-y: auto;
+  width: 100%;
+  text-align: left !important;
+}
+
+.swal2-content p {
+  margin: 0.5em 0;
+}
+
 @media (min-width: 500px) {
   body {
     font-size: 18px;

@@ -20,6 +20,29 @@
     height: auto;
 }
 
+.team {
+
+}
+
+.advisors {
+    background-image: url('/backgrounds/stars.jpg');
+    min-height: 50em;
+    min-height: 100vh;
+    height: auto;
+}
+
+.advisor {
+    cursor: pointer;
+}
+
+.advisor.advisorPic {
+    filter: grayscale(100%);
+}
+
+.advisor:hover.advisorPic {
+    filter: none;
+}
+
 .appear {
     background-color: rgba(0,0,0,0.85);
     position: absolute;
