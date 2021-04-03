@@ -8,7 +8,7 @@ const slides = [
   'Strategic Capital, High Conviction',
   'Relationships Are Our Secret Sauce'
 ];
-const sectionContainer = 's-contain h-full max-w-screen-xl mx-auto px-5 sm:px-6 lg:px-8';
+const sectionContainer = 's-contain h-full max-w-screen-xl mx-auto px-5 z-10 sm:px-6 lg:px-8';
 
 export default function Home() {
   return (
@@ -23,7 +23,8 @@ export default function Home() {
       </Head>
       <Navbar></Navbar>
       <main>
-        <section id="top" className={`${styles.hero} bg-black`}>
+        <section id="top" className={`${styles.hero} bg-cover bg-black`}>
+          <div className="shroud shroud-light"></div>
           <div className={sectionContainer}>
             <Slider slides={slides} auto={true}></Slider>
             <a className="next-section" href="#about">
@@ -31,13 +32,13 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section className="py-14" id="about">
+        <section id="about">
           <div className={sectionContainer}>
-            <div className="grid md:grid-cols-2">
-              <div className="md:pr-9">
-                <img src="/backgrounds/earth.jpg" alt="Picture" />
+            <div className="h-full flex flex-col items-center justify-center md:flex-row md:justify-around">
+              <div className="w-150 max-w-full md:pr-14">
+                <img className="w-full" src="/backgrounds/launch.jpg" alt="Launch" />
               </div>
-              <div className="md:pl-9">
+              <div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 mb-5 md:mt-0">We are a venture growth firm focused on early stage investments across the United States</h2>
                 <p className="text-gray-500">Our mission is to foster a hands on, value-add approach, working side-by-side with our entrepreneurs every step of the way.</p>
               </div>
@@ -46,10 +47,25 @@ export default function Home() {
               <img src="/misc/downarrow.png" alt="Thesis" />
             </a>
           </div>
+          <div className="v-block bg-gray-100"></div>
+          <div className="h-block bg-gray-100"></div>
         </section>
-        <section id="thesis">
-          <div className={sectionContainer}>
-
+        <section id="thesis" className={`${styles.thesis} bg-cover bg-black text-center text-white`}>
+          <div className="shroud shroud-heavy"></div>
+          <div className={`${sectionContainer} min-100vh`}>
+            <div className="h-full flex flex-col items-center justify-center py-24 md:py-40">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-5">Our strategy is to take an active role in the formation and management of early stage companies</h2>
+              <h3 className="text-xl sm:text-2xl md:text-3xl mb-5">We look for companies with potential for significant growth, primarily in SaaS technology as well as in consumer and retail technology</h3>
+              <p className="text-gray-300 mb-5">When we discover new opportunities outside our areas of expertise, we tap into our strong network of key advisors and relationships. Our external network allows us to expand our investment universe, giving us a significant competitive advantage in selecting the right investments.</p>
+              <p className="italic mb-5">Investment Criteria</p>
+              <div className="grid md:grid-cols-6 gap-4 px-5">
+                <div className="border border-white p-10 md:col-span-2">An innovative solution that offers a novel approach in addressing an unmet and critical market need</div>
+                <div className="border border-white p-10 md:col-span-2 md:pt-16">Seed investment to Series D</div>
+                <div className="border border-white p-10 md:col-span-2">A disruptive technology that is difficult to replicate or is patent-protected</div>
+                <div className="border border-white p-10 md:col-span-3">A substantial market size and the potential for recurring revenues</div>
+                <div className="border border-white p-10 md:col-span-3">Achievable business plan with a clear and carefully planned path to profitability and liquidity</div>
+              </div>
+            </div>
             <a className="next-section" href="#portfolio">
               <img src="/misc/downarrow_light.png" alt="Portfolio" />
             </a>

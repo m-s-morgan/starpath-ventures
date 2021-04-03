@@ -4,7 +4,11 @@
 
 .hero {
     background-image: url('/backgrounds/earth.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+.thesis {
+    background-image: url('/backgrounds/spacecloud.jpg');
+    min-height: 50em;
+    min-height: 100vh;
+    height: auto;
 }
