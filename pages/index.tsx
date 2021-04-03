@@ -71,9 +71,56 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section id="portfolio">
-          <div className={sectionContainer}>
-
+        <section id="portfolio" className={`${styles.portfolio} bg-cover bg-black text-center`}>
+          <div className="shroud shroud-white"></div>
+          <div className={`${sectionContainer} min-100vh`}>
+            <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:py-40">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Portfolio</h2>
+              <div className="grid md:grid-cols-3 px-5">
+                <a href="http://www.vyng.me/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white md:border-r-0">
+                  <div className={`${styles.vyng} bg-contain h-full`}></div>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
+                    <h3 className="text-xl font-bold">Vyng</h3>
+                    <p></p>
+                  </div>
+                </a>
+                <a href="https://spycloud.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-t">
+                  <div className={`${styles.spycloud} bg-contain h-full`}></div>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
+                    <h3 className="text-xl font-bold">SpyCloud</h3>
+                    <p></p>
+                  </div>
+                </a>
+                <a href="https://www.sensorindustries.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-t md:border-l-0">
+                  <div className={`${styles.sensorind} bg-contain h-full`}></div>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
+                    <h3 className="text-xl font-bold">Sensor Industries</h3>
+                    <p></p>
+                  </div>
+                </a>
+                <a href="http://covalence.io/" target="_blank" className="bg-contain block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-r-0">
+                  <div className={`${styles.covalence} bg-contain h-full`}></div>
+                  <div className={`${styles.appear} text-white text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
+                    <h3 className="text-xl font-bold">Covalence</h3>
+                    <p></p>
+                  </div>
+                </a>
+                <a href="https://www.knoppbio.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0">
+                  <div className={`${styles.knoppbio} bg-contain h-full`}></div>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
+                    <h3 className="text-xl font-bold">Knopp Biosciences</h3>
+                    <p></p>
+                  </div>
+                </a>
+                <a href="https://www.pole3.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-l-0">
+                  <div className={`${styles.pole3} bg-contain h-full`}></div>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
+                    <h3 className="text-xl font-bold">Third Pole</h3>
+                    <p></p>
+                  </div>
+                </a>
+              </div>
+            </div>
             <a className="next-section" href="#team">
               <img src="/misc/downarrow.png" alt="Team" />
             </a>
