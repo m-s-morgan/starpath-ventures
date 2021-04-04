@@ -44,11 +44,12 @@ export default function Home() {
       imageUrl: advisor.pic,
       imageHeight: 300,
       imageAlt: advisor.name,
+      confirmButtonText: 'Done',
       showClass: {
-        popup: 'animate__animated animate__fadeIn'
+        popup: 'animate__animated animate__fadeIn animate__faster'
       },
       hideClass: {
-        popup: 'animate__animated animate__fadeOut'
+        popup: 'animate__animated animate__fadeOut animate__faster'
       },
     });
   };
