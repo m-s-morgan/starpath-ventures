@@ -11,7 +11,7 @@
 }
 
 .portfolio {
-    background-image: url('/backgrounds/stars.jpg');
+    background-image: url('/backgrounds/starry.jpg');
 }
 
 .team {
@@ -19,11 +19,11 @@
 }
 
 .advisors {
-    background-image: url('/backgrounds/space1.jpg');
+    background-image: url('/backgrounds/streak.jpg');
 }
 
 .contact {
-    background-image: url('/backgrounds/us.jpg');
+    background-image: url('/backgrounds/moon.jpg');
 }
 
 .advisor {
@@ -66,7 +66,7 @@
 }
 
 .spycloud {
-    background-image: url('/portfolio/spycloud.svg');
+    background-image: url('/portfolio/spycloud.png');
 }
 
 .sensorind {
@@ -74,11 +74,11 @@
 }
 
 .covalence {
-    background-image: url('/portfolio/covalence.jpg');
+    background-image: url('/portfolio/covalence.png');
 }
 
 .knoppbio {
-    background-image: url('/portfolio/knopp.jpg');
+    background-image: url('/portfolio/knoppbio.png');
 }
 
 .pole3 {

@@ -124,46 +124,46 @@ export default function Home() {
             <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:py-40">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Portfolio</h2>
               <div className="grid md:grid-cols-3 px-5">
-                <a href="http://www.vyng.me/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white md:border-r-0">
+                <a href="http://www.vyng.me/" target="_blank" className="block relative h-80 w-80 max-w-100 border border-gray-500 bg-white md:border-r-0">
                   <div className={`${styles.vyng} bg-contain h-full`}></div>
-                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold mb-4">Vyng</h3>
-                    <p>A next-generation Caller ID platform that visualizes every call</p>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
+                    <h3 className="text-xl font-bold mb-5">Vyng</h3>
+                    <p className="text-sm">A next-generation Caller ID platform that visualizes every call to start better conversations between friends, families, and businesses. Their app replaces your old-school dialer and visualizes unknown calls with videos, animation, stickers and more.</p>
                   </div>
                 </a>
-                <a href="https://spycloud.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-t">
+                <a href="https://spycloud.com/" target="_blank" className="block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0 md:border-t">
                   <div className={`${styles.spycloud} bg-contain h-full`}></div>
-                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold mb-4">SpyCloud</h3>
-                    <p>A leader in account takeover (ATO) prevention</p>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
+                    <h3 className="text-xl font-bold mb-5">SpyCloud</h3>
+                    <p className="text-sm">A leader in account takeover (ATO) prevention, protecting billions of consumer and employee accounts either directly or through product integrations. The Company's award winning solutions proactively defeat fraud attempts and disrupt the criminals' ability to profit from stolen information.</p>
                   </div>
                 </a>
-                <a href="https://www.sensorindustries.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-t md:border-l-0">
+                <a href="https://www.sensorindustries.com/" target="_blank" className="block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0 md:border-t md:border-l-0">
                   <div className={`${styles.sensorind} bg-contain h-full`}></div>
-                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold mb-3">Sensor Industries</h3>
-                    <p>Harnesses data to identify and eliminate water waste on a massive scale</p>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
+                    <h3 className="text-xl font-bold mb-5">Sensor Industries</h3>
+                    <p className="text-sm">Leverages its proprietary and patented technology harnessing data that utilizes the Internet of Things (IoT) to identify and eliminate water waste on a massive scale, saving multi-unit property owners thousands in utility costs each month.</p>
                   </div>
                 </a>
-                <a href="http://covalence.io/" target="_blank" className="bg-contain block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-r-0">
+                <a href="https://covalence.io/" target="_blank" className="bg-contain block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0 md:border-r-0">
                   <div className={`${styles.covalence} bg-contain h-full`}></div>
-                  <div className={`${styles.appear} text-white text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold mb-4">Covalence</h3>
-                    <p>A 21st century trade school built for the 22nd</p>
+                  <div className={`${styles.appear} text-white text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
+                    <h3 className="text-xl font-bold mb-5">Covalence</h3>
+                    <p className="text-sm">A 21st century, fully online, fully remote trade school that trains skilled software developers for 22nd century careers by teaching them to learn the one thing they'll actually be doing day-in and day-out: reading, writing, and understanding software.</p>
                   </div>
                 </a>
-                <a href="https://www.knoppbio.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0">
+                <a href="https://www.knoppbio.com/" target="_blank" className="block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0">
                   <div className={`${styles.knoppbio} bg-contain h-full`}></div>
-                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold mb-3">Knopp Biosciences</h3>
-                    <p>Delivers breakthrough treatments for immunological and neurological diseases</p>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
+                    <h3 className="text-xl font-bold mb-5">Knopp Biosciences</h3>
+                    <p className="text-sm">A privately held drug discovery and development company focused on delivering breakthrough treatments for immunological and neurological diseases of high unmet need.</p>
                   </div>
                 </a>
-                <a href="https://www.pole3.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-l-0">
+                <a href="https://www.pole3.com/" target="_blank" className="block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0 md:border-l-0">
                   <div className={`${styles.pole3} bg-contain h-full`}></div>
-                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold mb-3">Third Pole</h3>
-                    <p>Develops next generation life-saving cardiopulmonary therapies</p>
+                  <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
+                    <h3 className="text-xl font-bold mb-5">Third Pole</h3>
+                    <p className="text-sm">A US-based company developing next generation life-saving cardiopulmonary therapies. The Company is building on their team's legacy in inhaled nitric oxide (NO), the current standard of care, to develop next generation life-saving heart and lung therapies.</p>
                   </div>
                 </a>
               </div>
@@ -181,8 +181,8 @@ export default function Home() {
                 <img className={`${styles.teamPic} transition-all duration-500 w-full rounded-full`} src="/team/mikemarsh.jpg" alt="Mike Marsh" />
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 mb-5 md:mt-0">Mike Marsh</h2>
-                <h3 className="text-xl sm:text-2xl md:text-3xl mb-5">Managing Partner</h3>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 mb-3 md:mt-0">Mike Marsh</h2>
+                <h3 className="text-lg sm:text-xl md:text-2xl mb-5">Managing Partner</h3>
                 <div className="text-gray-300 text-left text-sm md:text-base">
                   <p className="my-3">Mr. Marsh is an experienced investor, fundraiser and former technology investment banker. At Starpath, he develops and maintains a strong network of key industry players in the venture capital industry. His passion is working with select early stage companies and entrepreneurs helping them to achieve a clear and carefully planned path to profitability. Mike has assisted his portfolio companies with over $100M of fundraising for various financing rounds, both in equity and convertible debt.</p>
                   <p className="my-3">Mike first entered the venture ecosystem when he raised the seed round for Covalence, a reputable online coding and training platform, with three former Microsoft developers in 2012. He currently sits on the Company’s board and helps manage subsequent financing rounds. Mr. Marsh is also an advisor to Vyng, a next generation phone platform that visualizes every call. In addition to his role at Starpath, Mike is a principal and minority partner at Composite Ventures, an early stage venture firm focused on retail technology. At Composite, he works alongside his mentor and advisor, Jim Armstrong, who is the firm’s founder, the former co-founder of March Capital Partners and the first investor in PayPal.</p>
@@ -195,8 +195,8 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section id="advisors" className={`${styles.advisors} auto-section bg-cover bg-black text-white text-center`}>
-          <div className="shroud shroud-heavy"></div>
+        <section id="advisors" className={`${styles.advisors} auto-section bg-cover text-center`}>
+          <div className="shroud shroud-white"></div>
           <div className={`${sectionContainer} min-100vh`}>
             <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:py-40">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Advisors</h2>
@@ -214,32 +214,32 @@ export default function Home() {
               </div>
             </div>
             <a className="next-section" href="#contact">
-              <img src="/misc/downarrow_light.png" alt="Contact Us" />
+              <img src="/misc/downarrow.png" alt="Contact Us" />
             </a>
           </div>
         </section>
-        <section id="contact" className={`${styles.contact} bg-cover text-center`}>
-          <div className="shroud shroud-white"></div>
+        <section id="contact" className={`${styles.contact} bg-cover bg-black text-center text-white`}>
+          <div className="shroud shroud-light"></div>
           <div className={sectionContainer}>
             <div className="h-full flex flex-col items-center justify-center pb-14">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Contact Us</h2>
               <form className={`${styles.form} max-w-full px-3`} onSubmit={formSubmit}>
                 <div className="mt-4">
-                  <input className="focus:ring-gray-600 focus:border-gray-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3" placeholder="Name" />
+                  <input className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Name" />
                 </div>
                 <div className="md:grid md:grid-cols-2 gap-4">
                   <div className="mt-4">
-                    <input className="focus:ring-gray-600 focus:border-gray-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3" placeholder="Email" />
+                    <input className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Email" />
                   </div>
                   <div className="mt-4">
-                    <input className="focus:ring-gray-600 focus:border-gray-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3" placeholder="Company" />
+                    <input className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Company" />
                   </div>
                 </div>
                 <div className="mt-4">
-                  <textarea rows={3} className="shadow-sm focus:ring-gray-600 focus:border-gray-600 block w-full sm:text-sm border-gray-300 rounded-md p-3" placeholder="Message"></textarea>
+                  <textarea rows={3} className="shadow-sm focus:ring-gray-200 focus:border-gray-200 block w-full sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Message"></textarea>
                 </div>
                 <div className="mt-4">
-                  <button type="submit" className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-900 hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600">Send</button>
+                  <button type="submit" className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 text-black">Send</button>
                 </div>
               </form>
             </div>
