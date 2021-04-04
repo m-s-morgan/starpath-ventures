@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import Swal from 'sweetalert2';
 import marked from 'marked';
+import { FormEvent } from 'react';
 import Navbar from '../components/navbar/navbar';
 import Slider from '../components/slider/slider';
 import styles from '../styles/home.module.css';
 import 'animate.css/animate.min.css';
+
 
 
 const slides = [
@@ -52,6 +54,10 @@ export default function Home() {
         popup: 'animate__animated animate__fadeOut animate__faster'
       },
     });
+  };
+
+  const formSubmit = (ev?: FormEvent) => {
+    ev.preventDefault();
   };
 
   return (
@@ -179,7 +185,7 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 mb-5 md:mt-0">Mike Marsh</h2>
                 <h3 className="text-xl sm:text-2xl md:text-3xl mb-5">General Partner</h3>
-                <div className="text-gray-300 text-left">
+                <div className="text-gray-300 text-left text-sm md:text-base">
                   <p className="my-3">Mr. Marsh is an experienced investor, fundraiser and former technology investment banker. At Starpath, he develops and maintains a strong network of key industry players in the venture capital industry. His passion is working with select early stage companies and entrepreneurs helping them to achieve a clear and carefully planned path to profitability. Mike has assisted his portfolio companies with over $100M of fundraising for various financing rounds, both in equity and convertible debt.</p>
                   <p className="my-3">Mike first entered the venture ecosystem when he raised the seed round for Covalence, a reputable online coding and training platform, with three former Microsoft developers in 2012. He currently sits on the Company’s board and helps manage subsequent financing rounds. Mr. Marsh is also an advisor to Vyng, a next generation phone platform that visualizes every call. In addition to his role at Starpath, Mike is a principal and minority partner at Composite Ventures, an early stage venture firm focused on retail technology. At Composite, he works alongside his mentor and advisor, Jim Armstrong, who is the firm’s founder, the former co-founder of March Capital Partners and the first investor in PayPal.</p>
                   <p className="my-3">Mr. Marsh earned a BS in Finance from the University of Central Florida and obtained his MBA from the Johnson School of Management at Cornell University, with a concentration in investment banking and private equity. At Cornell, he was very active in the BR Ventures (BRV), an early stage venture capital fund operated entirely by MBA students at the University. Notably, Mike was selected in the Top 50 globally for the 2020 VC Unlocked cohort led by Stanford University and 500 Startups. The program is designed to represent the next generation of leaders in the venture capital industry.</p>
@@ -214,14 +220,43 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section id="contact">
+        <section id="contact" className={`${styles.contact} bg-cover text-center`}>
+          <div className="shroud shroud-white"></div>
           <div className={sectionContainer}>
-
+            <div className="h-full flex flex-col items-center justify-center pb-14">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Contact Us</h2>
+              <form className={`${styles.form} max-w-full px-3`} onSubmit={formSubmit}>
+                <div className="mt-4">
+                  <input className="focus:ring-gray-600 focus:border-gray-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3" placeholder="Name" />
+                </div>
+                <div className="md:grid md:grid-cols-2 gap-4">
+                  <div className="mt-4">
+                    <input className="focus:ring-gray-600 focus:border-gray-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3" placeholder="Email" />
+                  </div>
+                  <div className="mt-4">
+                    <input className="focus:ring-gray-600 focus:border-gray-600 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3" placeholder="Company" />
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <textarea rows={3} className="shadow-sm focus:ring-gray-600 focus:border-gray-600 block w-full sm:text-sm border-gray-300 rounded-md p-3" placeholder="Message"></textarea>
+                </div>
+                <div className="mt-4">
+                  <button type="submit" className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-900 hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600">Send</button>
+                </div>
+              </form>
+            </div>
           </div>
+          <footer className="absolute bg-black left-0 bottom-0 w-full z-10">
+            <div className="max-w-screen-xl mx-auto h-16 px-2 sm:px-6 lg:px-8 flex items-center justify-between text-center text-white">
+              <img className="block lg:hidden h-12 w-auto" src="/logos/star.png" alt="Starpath Ventures" />
+              <img className="hidden lg:block h-12 w-auto" src="/logos/logo_light.png" alt="Starpath Ventures" />
+              <div className="text-xs">Copyright © 2021 Starpath Ventures<br />All rights reserved</div>
+              <a className="block" href="#top">
+                <img className="h-6" src="/misc/uparrow_light.png" alt="Top" />
+              </a>
+            </div>
+          </footer>
         </section>
-        <footer>
-
-        </footer>
       </main>
     </div>
   );
