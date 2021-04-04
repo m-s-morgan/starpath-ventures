@@ -177,12 +177,12 @@ export default function Home() {
           <div className="shroud shroud-heavy"></div>
           <div className={`${sectionContainer} min-100vh`}>
             <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:flex-row md:justify-around md:py-40">
-              <div className="w-250 max-w-full md:pr-14">
-                <img className={`${styles.teamPic} transition-all duration-500 w-full`} src="/team/mikemarsh.jpg" alt="Mike Marsh" />
+              <div className="w-150 max-w-full md:pr-14">
+                <img className={`${styles.teamPic} transition-all duration-500 w-full rounded-full`} src="/team/mikemarsh.jpg" alt="Mike Marsh" />
               </div>
               <div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 mb-5 md:mt-0">Mike Marsh</h2>
-                <h3 className="text-xl sm:text-2xl md:text-3xl mb-5">General Partner</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl mb-5">Managing Partner</h3>
                 <div className="text-gray-300 text-left text-sm md:text-base">
                   <p className="my-3">Mr. Marsh is an experienced investor, fundraiser and former technology investment banker. At Starpath, he develops and maintains a strong network of key industry players in the venture capital industry. His passion is working with select early stage companies and entrepreneurs helping them to achieve a clear and carefully planned path to profitability. Mike has assisted his portfolio companies with over $100M of fundraising for various financing rounds, both in equity and convertible debt.</p>
                   <p className="my-3">Mike first entered the venture ecosystem when he raised the seed round for Covalence, a reputable online coding and training platform, with three former Microsoft developers in 2012. He currently sits on the Company’s board and helps manage subsequent financing rounds. Mr. Marsh is also an advisor to Vyng, a next generation phone platform that visualizes every call. In addition to his role at Starpath, Mike is a principal and minority partner at Composite Ventures, an early stage venture firm focused on retail technology. At Composite, he works alongside his mentor and advisor, Jim Armstrong, who is the firm’s founder, the former co-founder of March Capital Partners and the first investor in PayPal.</p>
