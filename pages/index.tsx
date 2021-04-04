@@ -92,7 +92,7 @@ export default function Home() {
           <div className="v-block bg-gray-100"></div>
           <div className="h-block bg-gray-100"></div>
         </section>
-        <section id="thesis" className={`${styles.thesis} bg-cover bg-black text-center text-white`}>
+        <section id="thesis" className={`${styles.thesis} auto-section bg-cover bg-black text-center text-white`}>
           <div className="shroud shroud-heavy"></div>
           <div className={`${sectionContainer} min-100vh`}>
             <div className="h-full flex flex-col items-center justify-center py-24 md:py-40">
@@ -113,7 +113,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section id="portfolio" className={`${styles.portfolio} bg-cover text-center`}>
+        <section id="portfolio" className={`${styles.portfolio} auto-section bg-cover text-center`}>
           <div className="shroud shroud-white"></div>
           <div className={`${sectionContainer} min-100vh`}>
             <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:py-40">
@@ -122,43 +122,43 @@ export default function Home() {
                 <a href="http://www.vyng.me/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white md:border-r-0">
                   <div className={`${styles.vyng} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold">Vyng</h3>
-                    <p></p>
+                    <h3 className="text-xl font-bold mb-4">Vyng</h3>
+                    <p>A next-generation Caller ID platform that visualizes every call</p>
                   </div>
                 </a>
                 <a href="https://spycloud.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-t">
                   <div className={`${styles.spycloud} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold">SpyCloud</h3>
-                    <p></p>
+                    <h3 className="text-xl font-bold mb-4">SpyCloud</h3>
+                    <p>A leader in account takeover (ATO) prevention</p>
                   </div>
                 </a>
                 <a href="https://www.sensorindustries.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-t md:border-l-0">
                   <div className={`${styles.sensorind} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold">Sensor Industries</h3>
-                    <p></p>
+                    <h3 className="text-xl font-bold mb-3">Sensor Industries</h3>
+                    <p>Harnesses data to identify and eliminate water waste on a massive scale</p>
                   </div>
                 </a>
                 <a href="http://covalence.io/" target="_blank" className="bg-contain block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-r-0">
                   <div className={`${styles.covalence} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold">Covalence</h3>
-                    <p></p>
+                    <h3 className="text-xl font-bold mb-4">Covalence</h3>
+                    <p>A 21st century trade school built for the 22nd</p>
                   </div>
                 </a>
                 <a href="https://www.knoppbio.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0">
                   <div className={`${styles.knoppbio} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold">Knopp Biosciences</h3>
-                    <p></p>
+                    <h3 className="text-xl font-bold mb-3">Knopp Biosciences</h3>
+                    <p>Delivers breakthrough treatments for immunological and neurological diseases</p>
                   </div>
                 </a>
                 <a href="https://www.pole3.com/" target="_blank" className="block relative h-40 w-80 max-w-100 p-5 border border-gray-500 bg-white border-t-0 md:border-l-0">
                   <div className={`${styles.pole3} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white opacity-0 transition-opacity duration-500 hover:opacity-100`}>
-                    <h3 className="text-xl font-bold">Third Pole</h3>
-                    <p></p>
+                    <h3 className="text-xl font-bold mb-3">Third Pole</h3>
+                    <p>Develops next generation life-saving cardiopulmonary therapies</p>
                   </div>
                 </a>
               </div>
@@ -168,15 +168,30 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <section id="team" className={`${styles.team} bg-cover bg-black text-white text-center`}>
-          <div className={sectionContainer}>
-
+        <section id="team" className={`${styles.team} auto-section bg-cover bg-black text-white text-center`}>
+          <div className="shroud shroud-heavy"></div>
+          <div className={`${sectionContainer} min-100vh`}>
+            <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:flex-row md:justify-around md:py-40">
+              <div className="w-250 max-w-full md:pr-14">
+                <img className={`${styles.teamPic} transition-all duration-500 w-full`} src="/team/mikemarsh.jpg" alt="Mike Marsh" />
+              </div>
+              <div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-5 mb-5 md:mt-0">Mike Marsh</h2>
+                <h3 className="text-xl sm:text-2xl md:text-3xl mb-5">General Partner</h3>
+                <div className="text-gray-300 text-left">
+                  <p className="my-3">Mr. Marsh is an experienced investor, fundraiser and former technology investment banker. At Starpath, he develops and maintains a strong network of key industry players in the venture capital industry. His passion is working with select early stage companies and entrepreneurs helping them to achieve a clear and carefully planned path to profitability. Mike has assisted his portfolio companies with over $100M of fundraising for various financing rounds, both in equity and convertible debt.</p>
+                  <p className="my-3">Mike first entered the venture ecosystem when he raised the seed round for Covalence, a reputable online coding and training platform, with three former Microsoft developers in 2012. He currently sits on the Company’s board and helps manage subsequent financing rounds. Mr. Marsh is also an advisor to Vyng, a next generation phone platform that visualizes every call. In addition to his role at Starpath, Mike is a principal and minority partner at Composite Ventures, an early stage venture firm focused on retail technology. At Composite, he works alongside his mentor and advisor, Jim Armstrong, who is the firm’s founder, the former co-founder of March Capital Partners and the first investor in PayPal.</p>
+                  <p className="my-3">Mr. Marsh earned a BS in Finance from the University of Central Florida and obtained his MBA from the Johnson School of Management at Cornell University, with a concentration in investment banking and private equity. At Cornell, he was very active in the BR Ventures (BRV), an early stage venture capital fund operated entirely by MBA students at the University. Notably, Mike was selected in the Top 50 globally for the 2020 VC Unlocked cohort led by Stanford University and 500 Startups. The program is designed to represent the next generation of leaders in the venture capital industry.</p>
+                </div>
+              </div>
+            </div>
             <a className="next-section" href="#advisors">
               <img src="/misc/downarrow_light.png" alt="Advisors" />
             </a>
           </div>
         </section>
-        <section id="advisors" className={`${styles.advisors} bg-cover bg-black text-white text-center`}>
+        <section id="advisors" className={`${styles.advisors} auto-section bg-cover bg-black text-white text-center`}>
+          <div className="shroud shroud-heavy"></div>
           <div className={`${sectionContainer} min-100vh`}>
             <div className="h-full min-100vh flex flex-col items-center justify-center py-24 md:py-40">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Advisors</h2>
@@ -185,7 +200,7 @@ export default function Home() {
                   advisors.map((a, i) => {
                     return (
                       <div key={i} className={`${styles.advisor} mb-5 md:mb-0`} onClick={() => onAdvisor(i)}>
-                        <div className={`${styles.advisorPic} h-96 w-80 max-w-100 bg-cover transition-all`} style={{ backgroundImage: `url(${a.pic})` }}></div>
+                        <div className={`${styles.advisorPic} h-96 w-80 max-w-100 bg-cover transition-all duration-500`} style={{ backgroundImage: `url(${a.pic})` }}></div>
                         <h4 className="text-xl sm:text-2xl mt-3">{a.name}</h4>
                       </div>
                     );

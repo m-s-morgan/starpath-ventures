@@ -31,9 +31,19 @@ section {
   width: 150rem;
 }
 
+.w-250 {
+  width: 250rem;
+}
+
 .min-100vh {
   min-height: 50em;
   min-height: 100vh;
+}
+
+.auto-section {
+  min-height: 50em;
+  min-height: 100vh;
+  height: auto;
 }
 
 .shroud {

@@ -8,38 +8,37 @@
 
 .thesis {
     background-image: url('/backgrounds/spacecloud.jpg');
-    min-height: 50em;
-    min-height: 100vh;
-    height: auto;
 }
 
 .portfolio {
     background-image: url('/backgrounds/stars.jpg');
-    min-height: 50em;
-    min-height: 100vh;
-    height: auto;
 }
 
 .team {
-
+    background-image: url('/backgrounds/space2.jpg');
 }
 
 .advisors {
-    background-image: url('/backgrounds/stars.jpg');
-    min-height: 50em;
-    min-height: 100vh;
-    height: auto;
+    background-image: url('/backgrounds/space1.jpg');
 }
 
 .advisor {
     cursor: pointer;
 }
 
-.advisor.advisorPic {
+.teamPic {
     filter: grayscale(100%);
 }
 
-.advisor:hover.advisorPic {
+.teamPic:hover {
+    filter: none;
+}
+
+.advisor .advisorPic {
+    filter: grayscale(100%);
+}
+
+.advisor:hover .advisorPic {
     filter: none;
 }
 
