@@ -7,8 +7,6 @@ import Slider from '../components/slider/slider';
 import styles from '../styles/home.module.css';
 import 'animate.css/animate.min.css';
 
-
-
 const slides = [
   'Building Smarter Companies Faster',
   'Strategic Capital, High Conviction',
