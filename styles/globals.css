@@ -118,6 +118,11 @@ section {
   box-sizing: border-box;
 }
 
+.swal2-popup {
+  max-height: 45em;
+  max-height: 95vh;
+}
+
 .swal2-content {
   max-height: 10em;
   max-height: 30vh;
