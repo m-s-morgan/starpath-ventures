@@ -110,6 +110,10 @@ section {
   height: 100%;
 }
 
+.no-resize {
+  resize: none;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import Swal from 'sweetalert2';
 import marked from 'marked';
-import { FormEvent } from 'react';
+import { FormEvent, ChangeEvent, useState } from 'react';
 import Navbar from '../components/navbar/navbar';
 import Slider from '../components/slider/slider';
 import styles from '../styles/home.module.css';
+import 'isomorphic-fetch';
 import 'animate.css/animate.min.css';
 
 const slides = [
@@ -30,6 +31,15 @@ const advisors = [
 ];
 
 export default function Home() {
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+    loading: false,
+    error: false,
+    success: false,
+  });
   const onAdvisor = (index: number) => {
     const advisor = advisors[index];
 
@@ -54,8 +64,62 @@ export default function Home() {
     });
   };
 
-  const formSubmit = (ev?: FormEvent) => {
+  const contactChanged = (ev?: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const target = ev.target;
+    const name = target.name;
+
+    setContact((prevState) => {
+      return {
+        ...prevState,
+        [name]: target.value
+      };
+    });
+  };
+
+  const formSubmit = async (ev?: FormEvent) => {
     ev.preventDefault();
+
+    setContact((prevState) => {
+      return {
+        ...prevState,
+        loading: true,
+        error: false,
+        success: false,
+      };
+    });
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: contact.name,
+        email: contact.email,
+        company: contact.company,
+        message: contact.message,
+      }),
+    });
+
+    if (res.ok) {
+      setContact({
+        name: '',
+        email: '',
+        company: '',
+        message: '',
+        loading: false,
+        error: false,
+        success: true,
+      });
+    } else {
+      setContact((prevState) => {
+        return {
+          ...prevState,
+          loading: false,
+          error: true,
+        };
+      });
+    }
   };
 
   return (
@@ -225,22 +289,25 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-9">Contact Us</h2>
               <form className={`${styles.form} max-w-full px-3`} onSubmit={formSubmit}>
                 <div className="mt-4">
-                  <input className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Name" />
+                  <input type="text" className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" name="name" placeholder="Name" value={contact.name} onChange={contactChanged} />
                 </div>
                 <div className="md:grid md:grid-cols-2 gap-4">
                   <div className="mt-4">
-                    <input className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Email" />
+                    <input type="email" className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" name="email" placeholder="Email" value={contact.email} onChange={contactChanged} required />
                   </div>
                   <div className="mt-4">
-                    <input className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Company" />
+                    <input type="text" className="focus:ring-gray-200 focus:border-gray-200 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md p-3 bg-black" name="company" placeholder="Company" value={contact.company} onChange={contactChanged} />
                   </div>
                 </div>
                 <div className="mt-4">
-                  <textarea rows={3} className="shadow-sm focus:ring-gray-200 focus:border-gray-200 block w-full sm:text-sm border-gray-300 rounded-md p-3 bg-black" placeholder="Message"></textarea>
+                  <textarea rows={5} className="max-h-40 no-resize shadow-sm focus:ring-gray-200 focus:border-gray-200 block w-full sm:text-sm border-gray-300 rounded-md p-3 bg-black" name="message" placeholder="Message" value={contact.message} onChange={contactChanged}></textarea>
                 </div>
                 <div className="mt-4">
-                  <button type="submit" className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 text-black">Send</button>
+                  <button type="submit" className="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-md bg-gray-200 hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 text-black">{contact.loading ? 'Sending...' : 'Send'}</button>
                 </div>
+                <div className={`text-sm mt-3 text-green-400${contact.success ? '' : ' hidden'}`}>Thanks for reaching out! We'll be in touch soon.</div>
+                <div className={`text-sm mt-3 text-red-400${contact.error ? '' : ' hidden'}`}>There was an error submitting your information</div>
+                <div className={contact.error || contact.success ? 'hidden' : ''}>&nbsp;</div>
               </form>
             </div>
           </div>

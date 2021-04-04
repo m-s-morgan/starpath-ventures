@@ -10,6 +10,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.2.5",
+    "isomorphic-fetch": "^3.0.0",
     "keen-slider": "^5.4.0",
     "mailgen": "^2.0.14",
     "mailgun-js": "^0.22.0",
