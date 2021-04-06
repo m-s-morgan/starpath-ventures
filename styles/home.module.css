@@ -2,10 +2,6 @@
     position: relative;
 }
 
-.hero {
-    background-image: url('/backgrounds/earth.jpg');
-}
-
 .thesis {
     background-image: url('/backgrounds/spacecloud.jpg');
 }

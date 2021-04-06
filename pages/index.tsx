@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Swal from 'sweetalert2';
 import marked from 'marked';
-import { FormEvent, ChangeEvent, useState } from 'react';
+import { FormEvent, ChangeEvent, useState, useEffect } from 'react';
 import Navbar from '../components/navbar/navbar';
 import Slider from '../components/slider/slider';
 import styles from '../styles/home.module.css';
@@ -40,6 +40,14 @@ export default function Home() {
     error: false,
     success: false,
   });
+  const [hero, setHero] = useState('/backgrounds/earthsmall.jpg');
+  useEffect(() => {
+    const heroImg = new Image();
+    heroImg.onload = () => {
+      setHero(heroImg.src);
+    };
+    heroImg.src = '/backgrounds/earth.jpg';
+  }, []);
   const onAdvisor = (index: number) => {
     const advisor = advisors[index];
 
@@ -134,7 +142,7 @@ export default function Home() {
       </Head>
       <Navbar></Navbar>
       <main>
-        <section id="top" className={`${styles.hero} bg-cover bg-black`}>
+        <section id="top" className="bg-cover bg-black transition-all" style={{ backgroundImage: `url(${hero})` }}>
           <div className="shroud shroud-light"></div>
           <div className={sectionContainer}>
             <Slider slides={slides} auto={true}></Slider>
