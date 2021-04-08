@@ -41,12 +41,14 @@ export default function Home() {
     success: false,
   });
   const [hero, setHero] = useState('/backgrounds/earthsmall.jpg');
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const heroImg = new Image();
     heroImg.onload = () => {
       setHero(heroImg.src);
     };
     heroImg.src = '/backgrounds/earth.jpg';
+    setLoaded(true);
   }, []);
   const onAdvisor = (index: number) => {
     const advisor = advisors[index];
@@ -145,7 +147,7 @@ export default function Home() {
       <main>
         <section id="top" className="bg-cover bg-black transition-all" style={{ backgroundImage: `url(${hero})` }}>
           <div className="shroud shroud-light"></div>
-          <div className={sectionContainer}>
+          <div className={`${sectionContainer}${loaded ? '' : ' opacity-0'}`}>
             <Slider slides={slides} auto={true}></Slider>
             <a className="next-section" href="#about">
               <img src="/misc/downarrow_light.png" alt="About" />
