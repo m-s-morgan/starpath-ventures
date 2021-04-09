@@ -150,7 +150,7 @@ export default function Home() {
       <main>
         <section id="top" className="bg-cover bg-black transition-all" style={{ backgroundImage: `url(${hero})` }}>
           <div className="shroud shroud-light"></div>
-          <div className={`${sectionContainer} transition-opacity duration-500${loaded ? '' : ' opacity-0'}`}>
+          <div className={`${sectionContainer} duration-500 ${loaded ? 'transition-opacity' : 'opacity-0'}`}>
             <Slider slides={slides} auto={true}></Slider>
             <a className="next-section" href="#about">
               <img src="/misc/downarrow_light.png" alt="About" />
