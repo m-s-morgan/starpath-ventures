@@ -125,6 +125,10 @@ section {
   height: 100%;
 }
 
+.carousel .slider-wrapper {
+  transition: none;
+}
+
 .carousel .slide {
   text-align: left !important;
 }

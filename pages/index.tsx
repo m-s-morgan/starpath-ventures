@@ -48,7 +48,10 @@ export default function Home() {
       setHero(heroImg.src);
     };
     heroImg.src = '/backgrounds/earth.jpg';
-    setLoaded(true);
+
+    setTimeout(() => {
+      setLoaded(true);
+    }, 500);
   }, []);
   const onAdvisor = (index: number) => {
     const advisor = advisors[index];
@@ -147,7 +150,7 @@ export default function Home() {
       <main>
         <section id="top" className="bg-cover bg-black transition-all" style={{ backgroundImage: `url(${hero})` }}>
           <div className="shroud shroud-light"></div>
-          <div className={`${sectionContainer}${loaded ? '' : ' opacity-0'}`}>
+          <div className={`${sectionContainer} transition-opacity duration-500${loaded ? '' : ' opacity-0'}`}>
             <Slider slides={slides} auto={true}></Slider>
             <a className="next-section" href="#about">
               <img src="/misc/downarrow_light.png" alt="About" />
