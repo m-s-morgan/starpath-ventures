@@ -27,7 +27,7 @@ export default function Navbar() {
                     </div>
                     <div className="flex-1 flex items-center sm:items-stretch sm:justify-between">
                         <div className="flex-shrink-0 flex items-center">
-                            <a href="#top" className="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                            <a href="#top" className="text-gray-300 hover:underline hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => toggleMenu(false)}>
                                 <img className="block lg:hidden h-12 w-auto" src="/logos/star.png" alt="Starpath Ventures" />
                                 <img className="hidden lg:block h-12 w-auto" src="/logos/logo_light.png" alt="Starpath Ventures" />
                             </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={`${menu ? 'block' : 'hidden'} sm:hidden`}>
+            <div className={`${menu ? 'h-60' : 'h-0'} overflow-hidden transition-all duration-500 sm:hidden`}>
                 <div className="px-2 pt-2 pb-3 space-y-1">
                     <a href="#about" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => toggleMenu(false)}>About</a>
                     <a href="#thesis" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => toggleMenu(false)}>Thesis</a>

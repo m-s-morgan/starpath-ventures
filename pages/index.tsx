@@ -11,7 +11,7 @@ import 'animate.css/animate.min.css';
 const slides = [
   'Building Smarter Companies Faster',
   'Strategic Capital, High Conviction',
-  'Relationships Are Our Secret Sauce'
+  'Relationship Driven, Robust Network'
 ];
 const sectionContainer = 's-contain h-full max-w-screen-xl mx-auto px-5 z-10 sm:px-6 lg:px-8';
 const advisors = [
@@ -150,7 +150,7 @@ export default function Home() {
       <main>
         <section id="top" className="bg-cover bg-black transition-all" style={{ backgroundImage: `url(${hero})` }}>
           <div className="shroud shroud-light"></div>
-          <div className={`${sectionContainer} duration-500 ${loaded ? 'transition-opacity' : 'opacity-0'}`}>
+          <div className={`${sectionContainer} ${loaded ? 'transition-opacity duration-500' : 'opacity-0'}`}>
             <Slider slides={slides} auto={true}></Slider>
             <a className="next-section" href="#about">
               <img src="/misc/downarrow_light.png" alt="About" />

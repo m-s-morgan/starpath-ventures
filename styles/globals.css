@@ -126,7 +126,7 @@ section {
 }
 
 .carousel .slider-wrapper {
-  transition: none;
+  transition: none !important;
 }
 
 .carousel .slide {
