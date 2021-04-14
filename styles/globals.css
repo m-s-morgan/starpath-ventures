@@ -123,14 +123,27 @@ section {
 .slider-wrapper,
 .slider {
   height: 100%;
+  width: 100% !important;
+}
+
+.carousel .carousel-slider {
+  margin: 0 !important;
 }
 
 .carousel .slider-wrapper {
   transition: none !important;
+  margin: 0 !important;
+}
+
+.carousel .slider.animated {
+  -moz-transition: transform 1500ms ease-in-out !important;
+  -webkit-transition: transform 1500ms ease-in-out !important;
+  transition: transform 1500ms ease-in-out !important;
 }
 
 .carousel .slide {
   text-align: left !important;
+  height: 100% !important;
 }
 
 .carousel .control-dots {
