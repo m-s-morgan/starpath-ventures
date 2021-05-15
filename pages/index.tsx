@@ -223,7 +223,7 @@ export default function Home() {
                     <p className="text-sm">Leverages its proprietary and patented technology harnessing data that utilizes the Internet of Things (IoT) to identify and eliminate water waste on a massive scale, saving multi-unit property owners thousands in utility costs each month.</p>
                   </div>
                 </a>
-                <a href="https://covalence.io/" target="_blank" className="bg-contain block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0 md:border-r-0">
+                <a href="https://covalence.io/" target="_blank" className="block relative h-80 w-80 max-w-100 border border-gray-500 bg-white border-t-0 md:border-r-0">
                   <div className={`${styles.covalence} bg-contain h-full`}></div>
                   <div className={`${styles.appear} text-white text-white opacity-0 transition-opacity duration-500 hover:opacity-100 flex flex-col justify-center items-center`}>
                     <h3 className="text-xl font-bold mb-5">Covalence</h3>
