@@ -68,6 +68,7 @@ export default function Home() {
       imageHeight: 300,
       imageAlt: advisor.name,
       confirmButtonText: 'Done',
+      confirmButtonColor: '#000',
       showClass: {
         popup: 'animate__animated animate__fadeIn animate__faster'
       },
